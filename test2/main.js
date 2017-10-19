@@ -26,12 +26,6 @@ $("#numRows").change(function(){
 	$(".data").remove();
 	populate();
 });
-
-$("#startRows").change(function(){
-	startingIndex = parseInt($("#startRows").val());
-	$(".data").remove();
-	populate();
-});
 $("#totalRows").change(function(){
 	totalRows = parseInt($("#totalRows").val());
 	if(totalRows<parseInt($("#startRows").val())){
@@ -39,6 +33,67 @@ $("#totalRows").change(function(){
 	}
 	$(".data").remove();
 	populate();
+});
+
+$("#startRows").change(function(){
+	prevStartingIndex = startingIndex;
+	startingIndex = parseInt($("#startRows").val());
+	if(prevStartingIndex<startingIndex){
+		for(var i=startingIndex-prevStartingIndex;i>0;i--){
+			$(".data").first().remove();
+			$("table").append("<tr class='data'><td class='firstcell'></td><td class='secondcell'></td><td class='thirdcell'></td><td class='fourthcell'></td><td class='fifthcell'></td></tr>");	
+		}
+
+		firstCell = document.querySelectorAll(".firstcell");
+		secondCell = document.querySelectorAll(".secondcell");
+		thirdCell = document.querySelectorAll(".thirdcell");
+		fourthCell = document.querySelectorAll(".fourthcell");
+		fifthCell = document.querySelectorAll(".fifthcell");
+
+		for(var j=noOfRows-startingIndex+1;j<noOfRows;j++){
+			if(j>totalRows-1)break;
+			if(secondCell[j] == undefined || thirdCell[j] == undefined || fourthCell[j] == undefined || fifthCell[j] == undefined){
+				break;
+			}
+			else{
+				m.render(firstCell[j+1],j+startingIndex-prevStartingIndex+1);
+				m.render(secondCell[j+1],Locn[j+startingIndex-prevStartingIndex]);
+				m.render(thirdCell[j+1],OrdId[j+startingIndex-prevStartingIndex]);
+				m.render(fourthCell[j+1],KsnId[j+startingIndex-prevStartingIndex]);
+				m.render(fifthCell[j+1],SkuCd[j+startingIndex-prevStartingIndex]);
+			}
+		}
+			
+	}
+	else{
+		for(var i=prevStartingIndex-startingIndex;i>0;i--){
+			var row = "<tr class='data'><td class='firstcell'></td><td class='secondcell'></td><td class='thirdcell'></td><td class='fourthcell'></td><td class='fifthcell'></td></tr>";
+			$(row).insertAfter(".tr1");
+			$(".data").last().remove();
+		}	
+
+		firstCell = document.querySelectorAll(".firstcell");
+		secondCell = document.querySelectorAll(".secondcell");
+		thirdCell = document.querySelectorAll(".thirdcell");
+		fourthCell = document.querySelectorAll(".fourthcell");
+		fifthCell = document.querySelectorAll(".fifthcell");
+
+		for(var j=prevStartingIndex-startingIndex;j>0;j--){
+			// if(j>totalRows-1)break;
+			if(secondCell[j] == undefined || thirdCell[j] == undefined || fourthCell[j] == undefined || fifthCell[j] == undefined){
+				break;
+			}
+			else{
+				m.render(firstCell[j],j+startingIndex-1);
+				m.render(secondCell[j],Locn[j+startingIndex-2]);
+				m.render(thirdCell[j],OrdId[j+startingIndex-2]);
+				m.render(fourthCell[j],KsnId[j+startingIndex-2]);
+				m.render(fifthCell[j],SkuCd[j+startingIndex-2]);
+			}
+		}
+
+	}
+	
 });
 
 function populate(){
