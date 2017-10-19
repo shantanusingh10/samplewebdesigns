@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search rows</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.1/css/tachyons.min.css"/>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="topbar">
+	<div class="button1"><span id="firstpage">|<</span> <span id="prevpage"><<</span> <span id="prevrow"><</span> </div>
+	<div id="inputs">
+		Showing  <input type="text" name="" id="numRows" value="10">
+		rows out of  <input type="text" name="" id="totalRows" value="100" disabled>
+		starting at row <input type="text" name="" id="startRows" value="1">
+	</div>
+	<div class="button2"> <span id="nextrow">></span> <span id="nextpage">>></span> <span id="lastpage">>|</span></div>
+</div>
+<table>
+	<tr>
+		<th class="firstcell"></th>
+		<th class="secondcell">Locn_Nbr</th>
+		<th class="thirdcell">Online_Ord_Id</th>
+		<th class="fourthcell">KSN_Id</th>
+		<th class="fifthcell">SKU_Prc_Type_Cd</th>
+	</tr>
+</table>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/mithril/mithril.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

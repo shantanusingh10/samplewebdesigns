@@ -1,0 +1,60 @@
+html{
+	background-color: pink;
+}
+table{
+	border-collapse: collapse;
+	margin-left: 50px;
+}
+th{
+	border: 1px solid black;
+	text-align: center;
+}
+td{
+	border: 1px solid black;
+}
+
+.fifthcell{
+	width: 450px;
+}
+.fourthcell{
+	width: 200px;
+}
+.thirdcell{
+	width: 300px;
+}
+.secondcell{
+	width: 200px;
+}
+.firstcell{
+	width: 75px;
+}
+#inputs{
+	display: inline;
+}
+.button1{
+	display: inline;
+	margin-left: 300px;
+	margin-right: 50px;
+	background-color: steelblue;
+	padding: 5px;
+	color: white;
+	border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.button2{
+	display: inline;
+	margin-left: 50px;
+	background-color: steelblue;
+	padding: 5px;
+	color: white;
+	border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.topbar{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+input[type="text"]{
+	width: 40px;
+	margin-right: 25px;
+}
