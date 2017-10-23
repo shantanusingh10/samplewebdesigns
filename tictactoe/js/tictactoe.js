@@ -1,10 +1,14 @@
 var chance = 1;
 var matrix = [[-1,8,10],[-16,-15,-14],[-13,-12,-11]];
 var wonGame = 0;
+var totalTurns = 0;
 
 var tab = "";
 
+
+
 $("td").on("click",function(){
+	totalTurns++;
 	if(wonGame)return;
 	if(chance == 1){
 		$(this).append("<img src='cross.jpg'>");
@@ -21,6 +25,8 @@ $("td").on("click",function(){
 		else matrix[2][2] = 1;
 		if(check()==1){
 			wonGame = 1;
+			$("body").append("<div id='wonDisplay'>Player1 Won the game!</div>");
+			$("#p2state").toggleClass("mutedisplay");	
 		}		
 	}
 	else{
@@ -37,11 +43,16 @@ $("td").on("click",function(){
 		else matrix[2][2] = 0;
 		if(check()==1){
 			wonGame = 1;
+			$("body").append("<div id='wonDisplay'>Player2 Won the game!</div>");
+			$("#p1state").toggleClass("mutedisplay");
 		}	
 	}
 	$("#p2state").toggleClass("mutedisplay");
 	$("#p1state").toggleClass("mutedisplay");
 	chance = !chance;
+	if(totalTurns==9){
+		console.log("Draw");
+	}
 });
 
 function check(){
