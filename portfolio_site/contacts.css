@@ -1,0 +1,13 @@
+h1{
+	text-align: center;
+	font-size: 60px;
+}
+html{
+	height: 100%;
+}
+body{
+	background: url("laptop1.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: 'Courgette', cursive;
+}
