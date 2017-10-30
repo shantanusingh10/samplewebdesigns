@@ -1,0 +1,55 @@
+#time{
+	font-size: 18px;
+}
+h1{
+	color: steelblue;
+	text-align: center;
+}
+.green{
+	background-color: rgb(0,255,0);
+}
+.yellow{
+	background-color: rgb(255,255,0);	
+}
+.orange{
+	background-color: rgb(255,165,0);
+}
+.red{
+	background-color: rgb(255,0,0);
+}
+#clock-boundary{
+	border: 2px solid black;
+	border-radius: 100px;
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 70px;
+}
+#inner-clock{
+	margin: 0 auto;
+	height: 2px;
+	width: 2px;
+	border-radius: 1px;
+	margin-top: 99px;
+}
+#controller{
+	margin-top: 6%;
+	text-align: center;
+}
+#start-btndiv{
+	margin-top: 20px;
+}
+#display-rem-time{
+	margin-top: 25px;
+	text-align: center;
+}
+#minus{
+	width: 50px;
+	height: 30px;
+	font-size: 20px;
+}
+#plus{
+	width: 50px;
+	height: 30px;
+	font-size: 20px;
+}
