@@ -1,0 +1,66 @@
+body{
+	background-color: rgba(200,200,200,0.8);
+}
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+.container{
+	height: 310px;
+	margin: 0 auto;
+	width: 320px;
+	margin-top: 20px;
+}
+.color-btn{
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	cursor: pointer;
+}
+#play-btn-div{
+	text-align: center;
+
+}
+#playarea{
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.green{
+	background-color: rgb(0,100,0);
+}
+.blue{
+	background-color: rgb(0,0,100);
+}
+.red{
+	background-color: rgb(100,0,0);
+}
+.yellow{
+	background-color: rgb(140,140,0);
+}
+.light-green{
+	background-color: rgb(0,255,0);
+}
+.light-red{
+	background-color: rgb(255,0,0);
+}
+.light-blue{
+	background-color: rgb(0,0,255);
+}
+.light-yellow{
+	background-color: rgb(255,255,0);
+}
+#blue:active{
+	background-color: rgb(0,0,255);
+}
+#green:active{
+	background-color: rgb(0,255,0);
+}
+#red:active{
+	background-color: rgb(255,0,0);
+}
+#yellow:active{
+	background-color: rgb(255,255,0);
+}
