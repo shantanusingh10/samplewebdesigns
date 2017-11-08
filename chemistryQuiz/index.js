@@ -3352,7 +3352,7 @@ function play(){
 	randomElementNum = Math.floor(Math.random()*118);
 
 	var containerDiv = document.getElementById("container");
-	containerDiv.innerHTML+="<h1>What is the atomic weight of " + allElements.elements[randomElementNum].symbol + " ?</h1>";
+	containerDiv.innerHTML+="<h1>What is the atomic number of " + allElements.elements[randomElementNum].symbol + " ?</h1>";
 
 	var options = [Math.floor(Math.random()*118),Math.floor(Math.random()*118),Math.floor(Math.random()*118),randomElementNum+1];
 
