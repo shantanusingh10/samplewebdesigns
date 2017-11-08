@@ -1,5 +1,7 @@
 ### A Simple chemistry quiz
 
+Attempt this quiz here - http://tab1.surge.sh/
+
 Give the correct answer to the good old chemistry question of atomic number of periodic elements.
 
 1. Randomly selects a periodic element and displays its symbol
