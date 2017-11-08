@@ -1,0 +1,36 @@
+h1{
+	text-align: center;
+}
+#container{
+	margin-top: 60px;
+}
+.option{
+	margin-left: 35%;
+	font-size: 25px;
+	margin-top: 10px;
+	border: 2px solid black;
+	width: 30%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 5px;
+	cursor: pointer;
+	background-color: steelblue;
+}
+.option:first-of-type{
+	margin-top: 50px;
+}
+#result,#playagain{
+	text-align: center;
+	font-size: 20px;
+	display: block;
+}
+#buttons{
+	width: 30%;
+	margin: 0 auto;
+}
+#yes-btn{
+	margin-left: 38%;
+}
+#no-btn{
+	margin-left: 5px;
+}
